@@ -7,7 +7,7 @@ class PostsIndex extends React.Component {
 
   render() {
     let posts = this.state.posts.map((post) => {
-      return this.renderPost(post)
+      return <Post post={post} key={post.id} />;
     });
 
     return (
@@ -21,11 +21,15 @@ class PostsIndex extends React.Component {
     );
   }
 
-  renderPost(post) {
+}
+
+class Post extends React.Component {
+  render() {
     return (
-      <li key={post.id}>
-        <a href={post.url}>{post.title}</a>
+      <li>
+        <a href={this.props.post.url}>{this.props.post.title}</a>
       </li>
-    )
+    );
   }
+
 }
