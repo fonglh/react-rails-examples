@@ -24,7 +24,7 @@ class PostsIndex extends React.Component {
   renderPost(post) {
     return (
       <li key={post.id}>
-        <a href={post.url}>{post.title}: {post.content}</a>
+        <a href={post.url}>{post.title}</a>
       </li>
     )
   }
