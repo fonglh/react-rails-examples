@@ -20,10 +20,6 @@ class PostsShow extends React.Component {
         <well>
           {post.content}
         </well>
-        <br/>
-        <br/>
-        <h3>Comments: </h3><br/>
-        <ul>{commentsToDisplay}</ul>
       </div>
     );
   }
